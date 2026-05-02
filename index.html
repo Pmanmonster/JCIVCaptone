@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Performing Pride — Jewish Identity on Instagram After October 7th</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script async src="//www.instagram.com/embed.js"></script>
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --ink: #1a1714;
+    --warm-gray: #8a847c;
+    --rule: #c8bfb0;
+    --accent: #7a3b2e;
+    --accent-light: #c4704f;
+    --muted: #e8e2d8;
+    --col-width: 680px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    height: 56px;
+  }
+  .nav-brand {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* HERO */
+  header {
+    padding-top: 56px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 39px, var(--rule) 39px, var(--rule) 40px);
+    opacity: 0.35;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 820px;
+    padding: 4rem 2rem;
+  }
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    display: block;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--warm-gray);
+    font-style: italic;
+    margin-bottom: 3rem;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-meta { display: flex; flex-direction: column; gap: 0.25rem; align-items: center; }
+  .hero-meta span {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+  }
+  .hero-rule { width: 48px; height: 1px; background: var(--rule); margin: 1.5rem auto; }
+
+  /* LAYOUT */
+  .section { padding: 6rem 2rem; border-bottom: 1px solid var(--rule); }
+  .section-inner { max-width: var(--col-width); margin: 0 auto; }
+
+  /* HEADINGS */
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: var(--ink);
+  }
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
+    margin: 3rem 0 1rem;
+    color: var(--ink);
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+  }
+  h4 {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin: 2.5rem 0 0.75rem;
+  }
+  p { margin-bottom: 1.25rem; }
+  p:last-child { margin-bottom: 0; }
+
+  /* VIDEO */
+  .video-container {
+    margin: 3rem 0;
+    background: var(--ink);
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .video-placeholder p {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  /* BLOCKQUOTE */
+  blockquote {
+    border-left: 2px solid var(--accent);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--warm-gray);
+    font-size: 1.05rem;
+  }
+  blockquote cite {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    font-style: normal;
+    color: var(--rule);
+  }
+
+  /* ACCOUNTS GRID */
+  .accounts-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    margin: 3rem 0;
+    border: 1px solid var(--rule);
+  }
+  .account-card { background: var(--cream); padding: 1.5rem 1rem; text-align: center; }
+  .account-handle {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .account-desc { font-size: 0.8rem; color: var(--warm-gray); line-height: 1.5; }
+
+  /* ANALYSIS BLOCKS */
+  .analysis-block { margin: 4rem 0; padding-top: 3rem; border-top: 1px solid var(--muted); }
+  .analysis-block:first-of-type { border-top: none; padding-top: 0; }
+
+  /* EMBEDS */
+  .embed-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2.5rem 0; }
+  .embed-single { max-width: 480px; margin: 2.5rem auto; width: 100%; }
+  .embed-caption {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .embed-placeholder {
+    background: var(--muted);
+    border: 1px dashed var(--rule);
+    padding: 3rem 2rem;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+  }
+
+  /* THEORY TAGS */
+  .theory-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0; }
+  .theory-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.2rem 0.6rem;
+  }
+
+  /* FRAMEWORK BOX */
+  .framework-box {
+    background: var(--muted);
+    border-left: 3px solid var(--accent);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    font-size: 0.93rem;
+  }
+  .framework-box strong {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  /* WORKS CITED */
+  .works-cited { background: var(--muted); }
+  .cite-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+  .cite-list li {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    padding-left: 2rem;
+    text-indent: -2rem;
+    color: var(--warm-gray);
+  }
+
+  /* FADE IN */
+  .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .accounts-grid { grid-template-columns: 1fr 1fr; }
+    .embed-row { grid-template-columns: 1fr; }
+    .section { padding: 4rem 1.25rem; }
+    h1 { font-size: 2.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-brand">Performing Pride</a>
+  <ul class="nav-links">
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#pride">What is Pride?</a></li>
+    <li><a href="#socialmedia">Why Social Media?</a></li>
+    <li><a href="#existing">Existing Research</a></li>
+    <li><a href="#methodology">Methodology</a></li>
+    <li><a href="#defiance">Pride as Defiance</a></li>
+    <li><a href="#identity">What Does Jewish Mean?</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#works-cited">Works Cited</a></li>
+  </ul>
+</nav>
+
+<header>
+  <div class="hero-inner">
+    <span class="hero-eyebrow">Research Paper · Instagram · Jewish Identity</span>
+    <h1>Performing <em>Pride</em></h1>
+    <p class="hero-subtitle">Jewish Identity on Instagram in the Wake of October 7th</p>
+    <div class="hero-rule"></div>
+    <div class="hero-meta">
+      <span>American Studies / Media Studies</span>
+      <span>Spring 2025</span>
+    </div>
+  </div>
+</header>
+
+<!-- INTRODUCTION -->
+<section class="section" id="introduction">
+  <div class="section-inner">
+    <span class="section-label">Introduction</span>
+    <h2>A New and Unsettling Social Reality</h2>
+
+    <div class="video-container">
+      <div class="video-placeholder">
+        <!--
+          REPLACE THIS COMMENT WITH YOUR VIDEO IFRAME, e.g.:
+          <iframe width="100%" height="100%"
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            frameborder="0" allowfullscreen
+            style="position:absolute;inset:0;width:100%;height:100%;">
+          </iframe>
+        -->
+        <p>[ Intro video — paste embed here ]</p>
+      </div>
+    </div>
+
+    <p>On October 7th, 2023, Hamas carried out a coordinated terrorist attack against Israel, resulting in over 1,200 deaths and more than 200 hostages taken. In response, Israel led a military campaign in Gaza, causing thousands of Palestinian deaths and the destruction of the territory. The United States, home to the second-largest Jewish population in the world, was deeply affected by this incident. The attacks from both parties led to discussions about whether the response was proportional, issues of sovereignty, war crimes, and accusations of genocide. The public asked American Jews to reckon with their ties to Israel during this violent crisis, to position themselves in a highly polarized topic, and to live as Jews in a moment where Jewish identity became inseparable from Israel's actions in Gaza. Jewish communities found themselves in a new and unsettling social reality in which their identity, safety, and sense of belonging were under attack.</p>
+
+    <p>This paper argues that in the post-October 7th period, Jewish influencers on social media — particularly Instagram — reframed and developed new strategies for debating, performing, and affirming their Jewish identity. While social media has always been a place for identity performance, this project examines how these performances changed in the wake of October 7th and its aftermath, a period when influencers navigated rising antisemitism and the pressures to take a stance on the war in Gaza. Drawing on complementary theoretical frameworks, including social identity theory, affect theory, and performance theory, this paper will analyze social media content from five Jewish Instagram accounts — @thatjewishfamily, @modi_live, @mollycrabapple, @_cteen, and @unpackedmedia — to show how pride functions not only as a celebration but also as a politically and psychologically valuable response to collective threat.</p>
+  </div>
+</section>
+
+<!-- WHAT IS PRIDE -->
+<section class="section" id="pride">
+  <div class="section-inner">
+    <span class="section-label">Theoretical Framework</span>
+    <h2>What is Pride, and Why Does it Matter?</h2>
+
+    <p>It is important to understand what pride truly is and its value to communities before examining how Jewish people present pride on social media. Pride is a contested, subjective concept that varies by audience; it is not a stable or universally shared feeling. What constitutes pride, who is permitted to feel it, and what it means to perform it publicly all depend on the social conditions in which it emerges. The general understanding of pride is that it is an internal feeling, something you experience individually, perhaps after an accomplishment or being somewhere you care about. This understanding of pride is correct, but incomplete. In <em>The Cultural Politics of Emotion</em> (2004), Sara Ahmed argues that emotions are not merely internal states but have a real impact on the world. They circulate between bodies and objects, they stick to things through repetition, and they "align some bodies with others" (Ahmed 195). Ahmed emphasizes this alignment and how they work to create and maintain boundaries between the inside and outside. Pride is a key emotion in this, as she argues that it is fundamentally about belonging to something larger than oneself, and that the performance of pride is for others.</p>
+
+    <blockquote>
+      "The possession of an ideal in feelings of pride or shame involves a performance, which gives the subject or group 'value' and 'character'… always addressed to others."
+      <cite>— Sara Ahmed, The Cultural Politics of Emotion (2004)</cite>
+    </blockquote>
+
+    <p>This framing is a crucial point that will be relied on for this project. When Jewish influencers post expressions of pride on social media, they are not reporting their internal state; they are performing to align with an identity and make that alignment visible to audiences. Ahmed adds valuable insight into the relationship between pride and threat. Pride is not a baseline condition for her but something that can be taken, destabilized, or made conditional. The ability to "be truly proud of our identity" (Ahmed, 111) depends on the social conditions that make it secure or insecure. When those conditions are challenged, as on October 7th, the relationship between identity and pride becomes so complicated that describing it as a celebration is inaccurate.</p>
+
+    <p>The conditions that made Jewish pride possible were destabilized after October 7th in a historically unprecedented way. The attack itself produced an outburst of solidarity and grief across the Jewish community and the world as a whole, but Israel's military response in Gaza muddied that solidarity. For American Jews, pride in Jewish identity became entangled with questions about Israeli state violence. This connection was not of their choosing but was imposed by a public discourse that increasingly treated Jewishness and Zionism as the same. This connection placed Jewish identity in an impossible dilemma. To express pride was to risk being seen as endorsing Israeli military action, while criticizing Israel was risking being accused of betraying Jewish solidarity. The assumption that Jewish identity requires a connection to Israel, and by extension that Jewish pride must include full support for the Jewish state, is one that many Jews strongly reject. However, this assumption has been the backbone of much of the conversation after October 7th, making it nearly impossible to perform Jewish pride in a purely cultural, religious, or ethnic register without that performance being read through the lens of the conflict. It is this difficulty that makes social media an incredibly valuable source for analysis, as each account navigates this conflict differently, and the differences reveal how splintered the condition of Jewish pride has become.</p>
+
+    <p>Sherman and Cohen's piece, <em>The Psychology of Self‐defense: Self‐Affirmation Theory</em>, complements Ahmed's framework by providing a psychological account of why pride expression might intensify when under threat. Self-affirmation theory states that "the overall goal of the self‐system is to protect an image of its self‐integrity, of its moral and adaptive adequacy" (Sherman, 2006). This framework is useful for understanding the post-October 7th moment because the threat to Jewish self-integrity was multifaceted. It came from antisemitism but also from within, as Israel's military conduct in Gaza made many American Jews confront a tension between their Jewish identity and their political values. For Jews who support Palestinian rights, oppose military action, or simply find themselves unable to reconcile pride in Jewish peoplehood with the images coming out of Gaza, self-affirmation becomes a more complicated task. Jews were asked to position themselves in a conflict in which their community was not only a victim but also an aggressor. This forced many Jewish influencers to reposition themselves and to find a version of Jewish pride that could hold together in the face of both external antisemitism and internal moral questioning.</p>
+
+    <p>When an identity is at threat, people are motivated to reaffirm the important aspects of who they are. In the post-October 7th context, this reaffirmation was complicated by the confluence of Jewish and Israeli identities. For many American Jews, the question of which aspects of Jewish identity were worth asserting became inseparable from the question of Israel and whether to embrace it, distance from it, or attempt to decouple Jewish pride from Israeli statehood entirely. What Sherman and Cohen's framework allows for is that this reaffirmation need not address the threat directly. It can come from any aspect of the self that is meaningful and secure. Sherman and Cohen extend this idea to the collective: when a group's identity or members are threatened, members are motivated to assert that identity more actively. It is important to note that this collective assertion does not take a single form. The political events following October 7th forced many Jews to reposition their relationship between Jewish and Israeli identity, but that repositioning looked radically different depending on who was doing it. For some, the collective threat strengthened the equation of Jewishness with Israel and Zionism. For others, it produced the opposite. Neither position was a natural or inevitable response. Despite the differences of opinion, there was a shared reaction: a sense of necessity to publicly assert Jewish identity when that identity seemed threatened. The surge of Jewish pride following October 7th can be viewed as a collective act of self-affirmation. It became a landscape of competing claims, with each finding its own method to reaffirm Jewish values.</p>
+
+    <div class="theory-tags">
+      <span class="theory-tag">Ahmed — Affect Theory</span>
+      <span class="theory-tag">Sherman &amp; Cohen — Self-Affirmation</span>
+      <span class="theory-tag">Tajfel &amp; Turner — Social Identity Theory</span>
+      <span class="theory-tag">Butler — Performativity</span>
+      <span class="theory-tag">Hogan — Exhibition vs. Performance</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SOCIAL MEDIA -->
+<section class="section" id="socialmedia">
+  <div class="section-inner">
+    <span class="section-label">Theoretical Framework</span>
+    <h2>Why Social Media?</h2>
+
+    <p>Now that we have established why we are examining pride, it is important to turn our attention to social media, as the choice of medium requires justification. Davis, Love, and Fares make the case directly in <em>Collective Social Identity: Synthesizing Identity Theory and Social Identity Theory Using Digital Data</em>, demonstrating that social identity theory's core ideas can be observed and tested with digital data. Their study of vegan identity on YouTube shows that identity challenges elicit measurable negative emotional responses and increased behavioral output, whereas identity-affirming content elicits the opposite. The finding that matters most for this project is their conclusion that "social media data thus combined with the IT and SIT research programs to form a symbiotic and productive union" (David et al. 2019). In other words, what happens in the posts and comments sections of social media is real evidence of the identity processes these frameworks have theorized.</p>
+
+    <p>Instagram has properties that make it an interesting site for this analysis. Ichau, Frissen, and d'Haenens in <em>From #selfie to #edgy. Hashtag networks and images associated with the hashtag #jews on Instagram</em> note that Instagram, as a platform that is oriented towards visual self-expression, "encourages self-centered practices of representation" because of the "instantaneous capturing and sharing of everyday practices" (Ichau et al, 2019). The visual dimension also matters greatly in this instance. Jessica Roda's study of ultra-Orthodox female influencers on Instagram offers one of the first analyses of Jewish identity construction on the platform. It establishes a framework relevant to this study. Roda shows that Instagram functions as a "counterpublic transformative space" where identity is negotiated, performed, and contested in relation to communal and religious authority (Roda, 2024). Her subjects — Hasidic and Litvish women artists and influencers — use the platform to simultaneously reinforce and challenge the norms of their communities, performing modesty and religious observance while also asserting forms of female agency and visibility that their communities' religious leadership actively discourages. The value of Roda's work lies in the structural dynamic she identifies: Instagram enables the construction of identities that are communally rooted and individually asserted, affirming belonging while also pushing against its boundaries. Where Roda's subjects navigate the tension between religious authority and female agency, the influencers analyzed here navigate the tension between communal Jewish identity and political positioning on Israel and Gaza. The platform functions similarly in both cases as a space where identity is not only expressed but also actively constructed and contested before audiences that include both sympathizers and hostile strangers.</p>
+
+    <p>Roda also demonstrates that Instagram's visual format shapes how identity gets performed. The platform's emphasis on images — on the face, the body, the domestic space, the religious object — makes visibility itself the primary medium of identity assertion. For ultra-Orthodox women whose faces and voices are excluded from mainstream Orthodox media, appearing on Instagram is already a political act. For the Jewish influencers examined in this study, the equivalent dynamic is the post-October 7th pressure to either perform or suppress Jewish visibility in a hostile environment. In both cases, what is shown and how it is framed carries as much analytical weight as what is said.</p>
+
+    <p>Before turning to the specific accounts analyzed in this study, it is worth clarifying what is meant by describing Jewish pride as "performed" on Instagram. The language of performance, drawn from Butler's theory of performativity and Ahmed's account of the social work of emotion, implies a live, present, audience-responsive act. Instagram, however, operates differently. Bernie Hogan's distinction between performance and exhibition offers a more precise account of what social media identity work actually involves.</p>
+
+    <div class="framework-box">
+      <strong>Hogan's Exhibition Framework</strong>
+      Hogan argues that social media functions as an exhibition space in which "information signifying an individual is delivered to the audience, on demand by a third party" and in which "the submitter does not continually monitor these data as an audience is receiving it, and may possibly never fully know the audience" (Hogan, 2010). A key consequence of this is what Hogan calls "lowest common denominator" culture, in which content is shaped not only by the intended audience but by the widest possible range of people who might encounter it, including hostile ones. When these accounts post anything, they are not adjusting their performance in real time in response to a specific audience. They are submitting an artifact to a platform that will deliver it to followers, algorithmically recommended viewers, and hostile commenters alike. The individual "need not consider everyone when submitting content but only two groups: those for whom we seek to present an idealized front and those who may find this front problematic." The "Free Palestine" comments that accumulate beneath a post are not interruptions of a performance — they are the visible trace of the exhibition's reach beyond its intended recipients.
+    </div>
+
+    <p>Understanding the posts analyzed in this study as exhibitions rather than performances helps explain why the comment sections are analytically inseparable from the posts themselves — the hostile responses are not noise but data, evidence of how Jewish visibility circulates beyond its intended audience in this landscape.</p>
+
+    <p>The environment that makes this pride performance necessary is also a social media phenomenon. Rachel Silverman's analysis of Instagram in the post-October 7 period argues that the platform became a site of active violence against Jews. Drawing on frameworks of epigenetic cultural trauma, Silverman contends that "the everyday experiences of navigating social media and being bombarded with antisemitic content create a chronic and violent form of exposure to hate that is cumulative and compounding" (Silverman, 2025). After October 7, she identified several types of antisemitism on the platform: epistemic antisemitism, which dismisses Jewish experiences of hatred; new antisemitism, which links Jewish identity and Israeli statehood as a single target; and de-marginalized antisemitism, which portrays Jews as oppressors rather than victims. What makes Silverman's framework essential to this study is her argument about Instagram's particular intimacy as a platform. Because, as research on user behavior suggests, people go to Instagram to post personal content, they also absorb content from Instagram in more personal ways, meaning that "when that content is antisemitic, it hits harder" (Silverman, 2025). If Instagram is, as Ichau et al. suggest, a site that encourages self-centered practices of self-expression, it is also, as Silverman makes clear, a site where that self is exposed to targeted hostility in an unusually personal register. The pride performances analyzed in this study do not take place in a neutral or celebratory digital space. They take place against this backdrop of documented, compounding, platform-specific hostility. That context is inseparable from what they are doing and why they are doing it.</p>
+
+    <p>Divon and Ebbrecht-Hartmann's study of #JewishTikTok documents one collective response to hostility on social media. Their analysis of Jewish creators on TikTok — "JewToks" — shows how a community under antisemitic pressure developed specific strategies for visibility, education, and resistance. Rather than retreating, these creators used TikTok's native vernacular to "combat Holocaust denial while dancing and lip-syncing in challenges, destigmatize Jewish culture using the respond-to-comment feature, immerse themselves in Jewish history with the green-screen effect, showcase Jewish customs" and even broadcast antisemitic attacks in real time (Divon &amp; Ebbrecht-Hartmann, 2022). The chapter establishes that the defiant digital visibility this paper identifies on Instagram is part of a broader pattern of Jewish social media self-assertion that predates October 7 and extends beyond it. Divon and Ebbrecht-Hartmann also name a structural problem that Instagram creators face as acutely as TikTok ones: algorithmic suppression of Jewish counter-content. As one JewTok creator explained, "to effectively fight antisemitism, I need to reuse the troll's existing hate content creatively... but most of the time, JewToks who counter speech are the ones to be flagged and shut off for days by the algorithm due to 'violation of terms'... in the meantime, trolls can spread hate freely" (Divon &amp; Ebbrecht-Hartmann, 2022). This dynamic shapes the conditions under which every account analyzed in this study operates. The choice to post publicly as a visibly Jewish person, and to keep doing so with pride, is made inside of a system that does not reliably protect that visibility.</p>
+  </div>
+</section>
+
+<!-- EXISTING RESEARCH -->
+<section class="section" id="existing">
+  <div class="section-inner">
+    <span class="section-label">Literature Review</span>
+    <h2>Existing Research</h2>
+
+    <p>There is a small but substantial amount of work on Jewish identity in social media that this project intends to build on. Ichau et al. conducted a large-scale analysis of 1,500 Instagram posts tagged with specific Jewish-focused hashtags, combining qualitative analysis with co-occurrence network analysis of hashtags. Their findings revealed a diverse social media landscape of Jewish representation, ranging from private life documentation to political content to explicitly antisemitic memes. Their broader argument is that "hashtags on Instagram can shape networked representations," meaning that the platform's tagging function leads to meaningful connections between individual posts and creates a collective identity on the platform. This study is useful as a methodological and empirical baseline: it maps the landscape of Jewish representation on Instagram before October 7th. It shows that this content is both analyzable and valuable to understanding Jewish identity.</p>
+
+    <p>Udi and Golan take a different approach in their piece, "Performing Identity on Social Media: Instagramming Jewishness on US University Campuses," which analyzes over 1,000 Instagram posts from 10 Hillel centers at American universities. Their study is the closest existing research to this study. Their main finding is that they describe the "Celebrating Identity" repertoire as a communication strategy that combines Jewishness, youthfulness, American belonging, and institutional affiliation to create "a diffuse and inclusive Jewish identity" (Udi and Golan, 2026). Using Judith Butler's theory of performativity, they argue that Jewish identity on Instagram emerges from repeated actions, such as sharing holiday celebrations, displaying Jewish items, and framing campus activities with "markers of Jewish tradition" (Udi and Golan, 2026). They state that "Hillel does not simply represent a pre-existing identity but actively produces it in the digital space, making Jewishness an effect of performative visibility rather than an internal belief" (Udi and Golan, 2026). They also observe that this celebratory way of expressing identity can hide the real challenges Jewish students face due to rising antisemitism, especially after October 7th. This project builds on Udi and Golan's work by focusing on individual voices from different political, religious, and cultural backgrounds, exploring how pride is used as a response to the post-October 7th attacks, and examining how identity is performed during a time marked by external threats and internal questions about Israel's actions in Gaza.</p>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="section" id="methodology">
+  <div class="section-inner">
+    <span class="section-label">Methodology</span>
+    <h2>Five Accounts, Five Perspectives</h2>
+
+    <p>This study analyzes Instagram posts from five diverse Jewish social media accounts using qualitative content analysis. These accounts, selected for their variety in political, cultural, and religious backgrounds within American Jewish life, reflect the diversity of the online community. The selection process involved identifying active, large Jewish Instagram accounts to ensure a variety of content types and perspectives. Five accounts were ultimately chosen to represent different viewpoints, voices, and styles — ranging from educational to conversational, comedic, or artistic — highlighting the diversity of Jewish self-representation online, following Udi and Golan's example.</p>
+
+    <p>@thatjewishfamily was selected for its window into Hasidic Orthodox daily life, representing the most visibly traditional end of the religious spectrum. @modi_live was chosen for his use of comedy as a vehicle for Jewish identity, a mode of expression with deep cultural roots that has not been examined in existing Instagram studies. @mollycrabapple represents an explicitly anti-Zionist leftist Jewish voice, a political position largely absent from prior research, which has tended to focus on mainstream or institutional accounts. @_cteen represents youth-oriented institutional outreach rooted in Chabad philosophy, offering a counterpoint to both the family lifestyle account and the comedian. @unpackedmedia was selected as the most explicitly Zionist account in the dataset, producing educational content that frames Jewish identity through direct connection to Israel. Together, these five accounts span the general ideological and religious spectrum of American Jewish life. While these five accounts should not be considered the totality of Jewish expression on social media, they serve as a window into the broader online landscape.</p>
+
+    <div class="accounts-grid">
+      <div class="account-card">
+        <span class="account-handle">@thatjewishfamily</span>
+        <p class="account-desc">Hasidic Orthodox daily life — the most visibly traditional end of the religious spectrum</p>
+      </div>
+      <div class="account-card">
+        <span class="account-handle">@modi_live</span>
+        <p class="account-desc">Comedy as a vehicle for Jewish identity — a mode with deep cultural roots not yet examined in existing Instagram studies</p>
+      </div>
+      <div class="account-card">
+        <span class="account-handle">@mollycrabapple</span>
+        <p class="account-desc">Explicitly anti-Zionist leftist Jewish voice — a political position largely absent from prior research</p>
+      </div>
+      <div class="account-card">
+        <span class="account-handle">@_cteen</span>
+        <p class="account-desc">Youth-oriented institutional outreach rooted in Chabad philosophy</p>
+      </div>
+      <div class="account-card">
+        <span class="account-handle">@unpackedmedia</span>
+        <p class="account-desc">The most explicitly Zionist account — educational content that frames Jewish identity through direct connection to Israel</p>
+      </div>
+    </div>
+
+    <p>Following the research precedent set by Ichau et al. and Udi and Golan, social media content is a site of active identity construction through what is posted, captioned, and tagged. For each account, four to five posts were selected for analysis. Posts were picked based on a few criteria: direct engagement with questions of Jewish identity and representativeness of each account's most common and characteristic content. All posts date from October 7th, 2023, onward. This timeframe, as Tschoegl and Yarvis write in <em>Existential Shattering in the American Jewish diaspora post-October 7: A Literature Review</em>, marks a distinct break in the Jewish experience, and social media content produced in its wake reflects a unique historical and sociological moment not visible in earlier posts. Udi and Golan's dataset was collected during the 2022/23 academic year, meaning that many of their posts predate October 7th, and this study uses that gap as its direct starting point.</p>
+
+    <p>Data were collected and organized in a structured spreadsheet in which each post was logged with its URL, caption text, descriptions of visual and audio content, selected comments, and an initial thematic note. This systematic approach allowed for cross-account comparisons and ensured that the analysis attended to the full multimodal character of Instagram content — not only what is said but also what is shown, heard, and hashtagged.</p>
+
+    <p>The findings will be presented on a website that integrates written analysis with embedded Instagram content. Because the argument of this study is fundamentally about visual identity performance, the website format allows the analysis to show rather than describe how Jewish pride is performed in the post-October 7th moment. Each thematic section combines written analysis with relevant posts, and the site opens with a brief introductory video that explains the project's context, research question, and approach.</p>
+  </div>
+</section>
+
+<!-- THEME 1: PRIDE AS DEFIANCE -->
+<section class="section" id="defiance">
+  <div class="section-inner">
+    <span class="section-label">Theme One</span>
+    <h2>Pride as Defiance</h2>
+
+    <p>Across nearly every post analyzed, Jewish pride is not performed as a baseline celebration but as active defiance — a deliberate choice to make Jewish identity more visible when external pressure would suggest retreat. This defiance takes radically different forms depending on each account's religious orientation, political commitments, and relationship to humor. Still, the underlying structure remains consistent: Jewish identity will not be diminished, hidden, or apologized for.</p>
+
+    <!-- RELIGIOUS -->
+    <div class="analysis-block">
+      <h3>Traditional and Religious Defiance</h3>
+
+      <h4>@thatjewishfamily — "What Would You Say to Them?"</h4>
+      <p>@thatjewishfamily's post, subtitled "What would you say to them?" directly addresses the fear many Jews have experienced post-October 7th. The video opens with the caption "But I'm afraid to leave my house looking like a Jew," and proceeds to feature multiple Jewish voices offering responses. It is filmed during a social gathering, like a party or community event, which is also meaningful. Choosing to film in a lively, communal space rather than in a private home or a talk-focused setting portrays the Jewish community as vibrant and celebratory, even during a time of fear. The interviewees clearly differ in their levels of observance: some men wear yarmulkes, while others do not; women appear with men, and children are visible in the background. This visual variety is intentional. It highlights that the call for visibility crosses different Jewish groups and speaks to all Jews, no matter how devout they are.</p>
+
+      <p>The responses all build around the argument: "If you need to process the fear, process it, but then move forward and be proud. Do not be scared, God is in charge of every single tiny detail... This is who you are, this is your identity, this is your expression. Judaism is going to stay alive, and if you want to keep Judaism alive, it is all through you. Feel the fear, but do it anyway." The statement that condenses this argument does not come from the video itself but from the comment section: "Do not dim your light." Light carries obvious Jewish religious resonance: the menorah, the Shabbat candles, the Hanukkah lights. It also functions as a broader claim about the moral necessity of visibility. To dim one's light would be to quietly give in to antisemitic pressure, to allow external threats to determine how Jewish identity should be presented in public. This is, in Ahmed's terms, the social condition of pride being made insecure, and the response is its deliberate reassertion. The non-Jewish commenters who respond with solidarity — "I'm not even Jewish, and I love this religion and culture so much! I'd be proud any day!" — demonstrate Ahmed's argument that the performance of pride is always addressed to others and that it works to align bodies across community boundaries. The pride performed here consolidates the Jewish community and also reaches outward, drawing in sympathetic non-Jewish audiences and making Jewish visibility legible as something worth celebrating rather than fearing.</p>
+
+      <div class="embed-single fade-in">
+        <!-- PASTE @thatjewishfamily "What Would You Say to Them?" embed here -->
+        <div class="embed-placeholder">[ @thatjewishfamily — "What Would You Say to Them?" ]</div>
+        <p class="embed-caption">@thatjewishfamily · Post 1</p>
+      </div>
+
+      <h4>@thatjewishfamily — Hoshana Rabbah After the Ceasefire</h4>
+      <p>This theme of defiant visibility continues in @thatjewishfamily's post about Hoshana Rabbah, the willow whacking ritual posted after the Gaza ceasefire agreement. The caption reads: "If you scroll back, you'll see right before October 7 me and the boys did exactly the same thing in the last video... today at the end of the two year battle, it's the same video it feels full circle. May there be no more severity for the Jewish people." The ritual itself, in which they hit willow branches on the ground to "soften the severity" of the upcoming year, becomes a visual conclusion to the October 7th incident. What the viewer sees is a father in a tallit and his two sons, one wearing a yarmulke, striking branches against the ground in Israel. The sound is only the branches hitting. There is no music, no narration, no explanation. This audio decision is analytically significant. Unlike the previous post, which used uplifting background music to make its content feel accessible and warm, this post offers nothing to soften or contextualize the ritual for an outside audience.</p>
+
+      <p>The performance is continuous: we did this before the attacks, and we are doing it again now. The family performs the tradition in Israel, which grounds their practice in the country that has become the center of mass international controversy. Given the current situation in the world, posting this transforms this religious ritual into a political statement of refusal to be moved or deterred. The defiance in this instance is silent, but its motivation is absolute. There is no defensive explanation about their thoughts about the details of the conflict, nor any attempt to make the practice legible to non-Jewish audiences. The performance continuity asserts that Jewish ritual life persists regardless of what is going on in the world.</p>
+
+      <p>The comment section reveals what is at stake in this silence. Supportive responses sit alongside repeated "Free Palestine" comments, some of which accumulated dozens of likes. It is important to note that the post contains no obvious political content. There is no mention of the war, no flag, no statement about Israel's military conduct. The only thing of note is the use of the term "massacre" in the caption to describe the October 7th attack. It is, on its face, a video of a religious ritual. Nevertheless, it becomes a site of political contestation simply by virtue of being performed in Israel by visibly Jewish people in the aftermath of October 7th. This confirms one of the central arguments of this study: that in the post-October 7th landscape, public Jewish visibility, regardless of the content, is never politically neutral. The act of existing visibly as a Jew, performing Jewish ritual in public space, is itself a position, and it will be read as one.</p>
+
+      <div class="embed-single fade-in">
+        <!-- PASTE @thatjewishfamily Hoshana Rabbah embed here -->
+        <div class="embed-placeholder">[ @thatjewishfamily — Hoshana Rabbah ]</div>
+        <p class="embed-caption">@thatjewishfamily · Post 2</p>
+      </div>
+    </div>
+
+    <!-- COMEDIC -->
+    <div class="analysis-block">
+      <h3>Comedic Defiance</h3>
+
+      <h4>@modi_live — Cash Hidden Around the House</h4>
+      <p>@modi_live's comedy offers a different kind of defiant Jewish pride, one rooted in dark humor and the strategic use of Jewish stereotypes. In his stand-up bit about keeping cash hidden throughout his house "in case the Nazis come," Modi performs a dark bit that acknowledges historical trauma but transforms it in a way that does not paralyze modern Jewish life. The punchline "You can't Venmo the guard… SSSchultz@ThirdReich.gov, with open closed gate emoji? You gotta have cash" names a real anxiety and then makes that anxiety absurd by superimposing it with modern technology. However, absurdity is not denial. It creates a space where fear can be acknowledged and laughed at rather than surrendered to. This is pride as a coping mechanism, a refusal to be defined solely by victimhood, even while not pretending that victimhood is not a reality of Jewish existence.</p>
+
+      <p>This use of dark humor as a mechanism for confronting rather than suppressing collective anxiety has a long history in Jewish cultural practice, and Modi's comedy sits within it. Liat Steir-Livny's study of Holocaust humor in Israeli culture argues that black humor and self-deprecating humor function as necessary psychological defense mechanisms in communities living under conditions of sustained and accumulated trauma. In a post-traumatic society where canonical memory agents "foster the acting out of the trauma and encourage unending victimization," humor offers an alternative, a way to protect "the individual and collective soul, even briefly, to protest the telescoping of the past into the present, and in so doing destroy the harbingers of fear" (Steir-Livny, 2021). Steir-Livny explains how Israeli comedians use Holocaust symbols not to deny or downplay the trauma but to change its meaning: Hitler is shown as a small-minded person frustrated by traffic; concentration camp images are added to reality TV. The idea is clear: by making fun of symbols of trauma, humor gives people a sense of control that history cannot. Steir-Livny says this type of humor helps people face their fears and keeps individuals and communities from feeling overwhelmed by constant anxiety and victimization (Steir-Livny, 2021).</p>
+
+      <p>Modi's comedy is similar, set within American Jewish life, where the history of trauma exists but is felt differently. His joke about hiding money at home in case Nazis return directly addresses the fear, instead of ignoring it. By laughing at it, he shows that this fear won't dictate his life. The joke works because it treats the fear as serious enough to be funny, not because it dismisses it. The audience's laughter isn't a way to escape history but a way to stay connected to it. In this way, laughter becomes an active show of resistance.</p>
+
+      <div class="embed-single fade-in">
+        <!-- PASTE @modi_live cash/Nazi bit embed here -->
+        <div class="embed-placeholder">[ @modi_live — Cash Hidden Around the House ]</div>
+        <p class="embed-caption">@modi_live · Post 1</p>
+      </div>
+
+      <h4>@modi_live — The Kapparot Joke</h4>
+      <p>Modi's Kapparot joke works similarly, but it touches on a lighter subject. The humor comes from showing the difference between how insiders and outsiders see Jewish practices: explaining the ritual of swinging a chicken over your head to transfer sins to a non-Jewish audience, then jokingly asking, "Is that how you do your taxes too? Yes! The chicken is tax-deductible!" The joke depends on understanding how Jewish rituals look from an outsider's view while also showing a sense of ownership of these traditions. The punchline makes the practice more understandable and funny for Americans, but it also indicates that Jewish practices are part of modern American life.</p>
+
+      <p>What links Modi's comedy to the everyday posts on @thatjewishfamily and @_cteen is a refusal to back down. Modi isn't just explaining himself. He presents Jewish identity as something naturally worth embracing, and the humor comes from his confidence in doing so. The comedy is a sign of pride, not a softened version of it, but its most straightforward expression.</p>
+
+      <div class="embed-single fade-in">
+        <!-- PASTE @modi_live Kapparot embed here -->
+        <div class="embed-placeholder">[ @modi_live — The Kapparot Joke ]</div>
+        <p class="embed-caption">@modi_live · Post 2</p>
+      </div>
+    </div>
+
+    <!-- HISTORICAL -->
+    <div class="analysis-block">
+      <h3>Historical and Cultural Defiance</h3>
+
+      <h4>@mollycrabapple — The Jewish Labor Bund</h4>
+      <p>@mollycrabapple's approach to Jewish pride offers the sharpest contrast to the religious accounts, but it is equally defiant in asserting Jewish identity. Where @thatjewishfamily and @_cteen ground Jewish pride in religious observance and communal belonging, Crabapple grounds it in political history. Specifically, in recovering a Jewish radical tradition that mainstream Jewish institutions have largely suppressed or forgotten. Her collection of posts about the Jewish Labor Bund, a secular, socialist, anti-Zionist movement in early 20th-century Eastern Europe, does not simply educate her audience about history. It constructs an alternative Jewish history, one in which the defining tradition of Jewish political life is not Zionism but diasporism, labor organizing, and revolutionary struggle.</p>
+
+      <p>In one post, she discusses the Bund's sports club Morgenshtern, noting that "when people write about Jewish labor history, they write about death and labor, but people do not talk about life." The accompanying historical images depict robust young Jewish bodies engaged in gymnastics and athletics: strong, collective, physically confident. This visual choice is deliberate. The images directly challenge the stereotype of Jewish physical weakness and passivity that has historically been used both by antisemites and by Zionist ideology to argue for the necessity of a Jewish state that could produce a "new Jew." By recovering images of strong, proud, diaspora Jews who built a thriving counter-culture in interwar Poland without reference to Israel, Crabapple is making an argument about what Jewish strength has historically looked like and can look like again. Her post about her research process for her book on the Bund extends this further. She talks about learning Yiddish, traveling to Latvia and Eastern Europe during the Russian invasion of Ukraine, interviewing elderly descendants of Bundists, and locating a man who ran guns for the Bund in Warsaw as a teenager. The labor of this research — which took years of archival work, language learning, and travel to dangerous regions — is itself performed as a form of Jewish pride. The post functions as a performance of Jewish intellectual and political seriousness, positioning the Bund not as a historical footnote but as a living resource for contemporary Jewish identity.</p>
+
+      <div class="embed-row fade-in">
+        <div>
+          <!-- PASTE @mollycrabapple Bund/Morgenshtern post here -->
+          <div class="embed-placeholder">[ @mollycrabapple — Bund / Morgenshtern ]</div>
+          <p class="embed-caption">@mollycrabapple · Post 1</p>
+        </div>
+        <div>
+          <!-- PASTE @mollycrabapple research process post here -->
+          <div class="embed-placeholder">[ @mollycrabapple — Research Process ]</div>
+          <p class="embed-caption">@mollycrabapple · Post 2</p>
+        </div>
+      </div>
+
+      <h4>@mollycrabapple — Year-End Wrap-Up &amp; Itka the Bundist</h4>
+      <p>Her year-end wrap-up post makes her political commitments in the present tense explicit: "this year all I can think about is Palestine... in October, me, my best friend and I, and hundreds of other Jews took over the Statue of Liberty to say not in our fucking names." The protest at the Statue of Liberty — the American symbol of immigrants and democratic idealism — becomes the vehicle for claiming a diasporic, anti-Zionist Jewish identity. The Statue of Liberty is where Jewish immigrants arrived, where the promise of American belonging was first made visible. To claim it as the site of Jewish protest against Israeli state violence is to assert that diaspora Jewish identity has its own history, its own landmarks, its own political claims that are independent of Israel. The register of Crabapple's language is also worth noting. Where other accounts in this dataset use more careful and measured language, Crabapple's caption uses profanity without apology. The anger embedded in that language marks a refusal of the decorum that institutional Jewish pride typically expects. It signifies that this is not a matter for careful diplomatic phrasing. It is a moral emergency, and the language reflects that. The curse word is itself a performance of defiance not only against Israeli state violence, but also against the expectation that Jewish dissent should be expressed politely. Her Cullman Center fellowship is described as time spent "writing anti-Zionist Jewish history," and the post ends with "Palestine in my heart," making clear that for Crabapple, Jewish pride and Palestinian solidarity are not in tension but mutually constitutive.</p>
+
+      <p>The reprinting of her great-grandfather Sam Rothbort's painting "Itka the Bundist," showing two young Jewish revolutionaries on what she calls "a window-smashing date night," anchors this political commitment in personal and familial history. The choice to reproduce her great-grandfather's work is analytically significant. It presents Jewish pride as something inherited and embodied, passed down through generations, rooted in a specific family and place. This is not abstract political commitment but a lived Jewish heritage. The 1926 Yiddish newspaper page that accompanies the print, described as "a cheeky socialist paper, targeting landlords, factory owners and the local Zionist elite," makes the political lineage explicit: Crabapple's anti-Zionism is not a contemporary political position adopted in response to Gaza. It is a family inheritance, a century old.</p>
+
+      <p>Crabapple's defiance is therefore double: she refuses to retreat from public Jewish identity in the face of rising antisemitism, and she refuses to allow that Jewish identity to be conscripted into support for Israeli state violence. The recovery of Bundist history — grounded in Yiddish language, diasporism, and internationalist politics — is itself an act of defiance against what she frames as the false equation of Jewishness with Zionism. In Ahmed's terms, she is performing pride as alignment — but the community she is aligning with is not the mainstream American Jewish community organized around Israel. It is a different Jewish lineage entirely, one that predates Zionism and explicitly challenged it.</p>
+
+      <div class="embed-row fade-in">
+        <div>
+          <!-- PASTE @mollycrabapple year-end wrap-up here -->
+          <div class="embed-placeholder">[ @mollycrabapple — Year-End Wrap-Up ]</div>
+          <p class="embed-caption">@mollycrabapple · Post 3</p>
+        </div>
+        <div>
+          <!-- PASTE @mollycrabapple Itka the Bundist here -->
+          <div class="embed-placeholder">[ @mollycrabapple — Itka the Bundist ]</div>
+          <p class="embed-caption">@mollycrabapple · Post 4</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THEME 2: WHAT DOES JEWISH MEAN? -->
+<section class="section" id="identity">
+  <div class="section-inner">
+    <span class="section-label">Theme Two</span>
+    <h2>What Does Jewish Mean?</h2>
+
+    <p>Pride as defiance describes the overall structure of the virtual Jewish identity performance after October 7th, but it doesn't fully capture the content within that frame. What it means to be Jewish and the question of who gets to define it constitute a substantial dimension to analyze. The performances examined are not just different expressions of a shared identity; they are competing claims about what that identity is and should be.</p>
+
+    <!-- ISRAEL FAULT LINE -->
+    <div class="analysis-block">
+      <h3>The Israel Question as Fault Line</h3>
+
+      <h4>@unpackedmedia — The Dreidel Post</h4>
+      <p>The most politically and socially charged dimension is the question of Israel. @unpackedmedia's post about the dreidel offers the clearest articulation of an Israel-centric Jewish identity. The post is produced like a documentary, with clean graphics, Jewish imagery, and uplifting background music, giving it the register of educational content rather than political argument. This aesthetic choice is itself analytically significant. By presenting a politically charged claim in the visual language of neutral education, @unpackedmedia naturalizes its argument, making it appear as a historical fact rather than an ideological position. The post explains that Israeli dreidels substitute one letter, changing "a great miracle happened there" to "a great miracle happened here," and uses this detail to make a broader argument: "Hanukkah isn't just a universal symbol of Jewish resilience. It's a story rooted in the land where it actually happened, in Judea, where the Maccabees fought for Jewish freedom and sovereignty... When people try to erase Israel from the story of Judaism, they are changing history." This perspective views Israel not just as one part of Jewish identity, but as its geographical and historical center. The greatest achievement didn't happen "there," in the diaspora, in memories, or cultural practices, but "here," on the land where Jews now have their own state. This way of framing makes supporting Israel feel like a historical and religious truth rather than just a political or social choice. To oppose Zionism is seen as denying Jewish history itself.</p>
+
+      <div class="embed-single fade-in">
+        <!-- PASTE @unpackedmedia dreidel post here -->
+        <div class="embed-placeholder">[ @unpackedmedia — The Dreidel Post ]</div>
+        <p class="embed-caption">@unpackedmedia · Post 1</p>
+      </div>
+
+      <h4>@unpackedmedia — Dual Loyalty Accusations</h4>
+      <p>@unpackedmedia's post about dual-loyalty accusations uses a particular approach. It presents itself as a response to right-wing conspiracy theories, specifically the idea that Jewish people who support Israel can't be trusted as American citizens. The post uses facts — Jewish people are connected worldwide, and pro-Israel lobbying has significant political influence — but it explains these as a natural result of centuries of persecution and diaspora rather than proof of divided loyalty. As the speaker says, "Jewish global connection was never a plot; it was survival." The format does the rhetorical work, as the dreidel post does. It includes news clips, historical images, and a calm voiceover. It sounds like a history lesson, not a political argument. The post makes a claim about Jewish identity and Israel, but presents it in a way that feels like education. This makes it harder to disagree with without seeming like you are denying history.</p>
+
+      <div class="embed-single fade-in">
+        <!-- PASTE @unpackedmedia dual-loyalty post here -->
+        <div class="embed-placeholder">[ @unpackedmedia — Dual Loyalty ]</div>
+        <p class="embed-caption">@unpackedmedia · Post 2</p>
+      </div>
+
+      <div class="framework-box">
+        <strong>The Unbridgeable Gap</strong>
+        The gap between these two positions is not bridgeable. @mollycrabapple's posts construct the exact inverse of @unpackedmedia's framework. Her recovery of Bundist history, and specifically the Bund's central principle of doikayt — building Jewish life in the diaspora rather than emigrating to Palestine — performs a Jewish identity with no necessary reference to Israel. Zionism, in this framework, is one contested option among many, and one Crabapple explicitly rejects. @unpackedmedia argues that Jewishness that does not focus on Israel is historically incorrect. In contrast, @mollycrabapple believes that identifying Jewishness with Israeli statehood goes against traditional Jewish values. Both claim to be based on genuine Jewish history, but they are in direct competition to define what Jewishness truly is.
+      </div>
+    </div>
+
+    <!-- REFUSING FIXED CATEGORIES -->
+    <div class="analysis-block">
+      <h3>Refusing Fixed Categories</h3>
+
+      <h4>@modi_live — Moshiach Air</h4>
+      <p>@modi_live challenges simple distinctions by showing his Jewish identity as naturally mixed. In an interview on his account, Modi explains how his Israeli-American background influences his comedy: "When I'm with my American friends, I'm Israeli; when I'm in Israel, I'm American. In Israel, my audience is half Israeli and half expats. They all think I'm one of them." This ambiguity shows how diasporic Jewish identity often refuses to be strictly categorized. He isn't failing to belong somewhere; he's succeeding in belonging everywhere at once, and his comedy stems from this. Modi tells punchlines in Hebrew that only part of his audience understands, creating layers of insider and outsider knowledge in a single act. Consequently, his Jewish identity is always a bit hard to pin down, always beyond the categories the audience tries to assign him.</p>
+
+      <p>His post shows him wearing a tallit and tefillin on a private jet, captioned "Moshiach Air." This places traditional Jewish objects in a setting associated with wealth and success, without explanation or irony — just silence. There's no defensiveness or justification, only a straightforward recording of Jewish practice in an unusual setting. It shows that you can be deeply traditional, American, successful, and at ease in the world. The defiance is in not choosing sides, and the humor comes from confidently ignoring the contradictions. This image contrasts with @unpackedmedia's Israel-focused view and @mollycrabapple's diaspora politics. Modi isn't making a point about Israel or Zionism. He's simply expressing a mixed, ironic, comfortable Jewish identity that doesn't fit neatly into either camp.</p>
+
+      <div class="embed-single fade-in">
+        <!-- PASTE @modi_live Moshiach Air post here -->
+        <div class="embed-placeholder">[ @modi_live — Moshiach Air ]</div>
+        <p class="embed-caption">@modi_live · Post 3</p>
+      </div>
+
+      <h4>@_cteen — "What Makes You Proud to Be Jewish?"</h4>
+      <p>@_cteen's content, although more focused on faith, shows a similar way of understanding Jewish identity through diversity rather than purity. The post "What makes you proud to be Jewish?" features quick clips of teenage responses: community, food, heritage, Israel, faith, and the continuity of Jewish life over five thousand years. The visual style is important. The montage moves quickly, cutting between faces of different ages, backgrounds, and levels of observance — some wearing kippot, others not — producing a sense of collective energy rather than individual testimony. No single answer is allowed to dominate. The editing performs the argument: Jewish identity is plural, expansive, and non-hierarchical. There is no attempt to rank these responses or establish which one is most authentic. "Food" sits alongside "Israel" alongside "the fact that I can be different from others" with equal weight. The list is striking because of its refusal to impose order. There is no theology, no political argument, no position on Zionism or diaspora. There is only the accumulated, unfiltered answer to a simple question — and the answer turns out to be everything at once.</p>
+
+      <p>This vision directly contradicts both @mollycrabapple's sharp political clarity and @unpackedmedia's Israel-centered framework. Where those two accounts make incompatible arguments about what Jewish identity must be grounded in, @_cteen's montage suggests that the question itself may be the wrong one. It implies that post-October 7th Jewish pride might be constructed not by resolving contradictions but by refusing to treat them as contradictions at all, holding community, food, faith, Israel, heritage, and individualism together in the same frame and presenting that plurality not as a problem to be solved but as the thing itself. That same institutional flexibility that allows @_cteen to present Jewish identity as a non-hierarchical mosaic also allows it to produce content that is far more politically specific — and far more contested.</p>
+
+      <div class="embed-single fade-in">
+        <!-- PASTE @_cteen "What Makes You Proud?" post here -->
+        <div class="embed-placeholder">[ @_cteen — What Makes You Proud to Be Jewish? ]</div>
+        <p class="embed-caption">@_cteen · Post 1</p>
+      </div>
+    </div>
+
+    <!-- THE HOSTAGE -->
+    <div class="analysis-block">
+      <h3>The Hostage as a Symbol</h3>
+
+      <h4>@_cteen — Segev Kalfon</h4>
+      <p>The @_cteen post featuring the released hostage Segev Kalfon is worth examining in full before analyzing what it does. The visual setup matters: a young CTeen member sits across from Kalfon at Chabad headquarters, and before either of them says anything, the camera watches them wrap tefillin together. The act of wrapping is shown in close detail — the leather straps wound around the arm, the box placed on the forehead — making the ritual object the center of the frame before a single word of testimony is spoken. The interview does not begin with an explanation. It begins with the body. The tefillin is not introduced or contextualized for an outside audience. It is simply put on, as if its presence requires no justification.</p>
+
+      <p>Kalfon then explains in Hebrew, with English subtitles, that he was not particularly observant before October 7th. During his 738 days in captivity — described as giving him less than a one percent chance of survival — he promised God he would walk in His path, which for him meant wrapping tefillin every day. "Now if I don't put it on every day, I feel as if there's something missing in my body; I can't continue my day." What is striking about that line is how physical it is. Not spiritual, not abstract — physical. The tefillin is described the way you would describe food or sleep, something the body simply needs. It is a marker of survival, something that was absent during captivity and whose daily presence now confirms that he is alive and returned to himself.</p>
+
+      <div class="embed-single fade-in">
+        <!-- PASTE @_cteen Segev Kalfon post here -->
+        <div class="embed-placeholder">[ @_cteen — Segev Kalfon ]</div>
+        <p class="embed-caption">@_cteen · Post 2</p>
+      </div>
+
+      <p>The post can be read through multiple frameworks at once, and that is precisely what makes it such a rich analytical site. For a religious audience, it is a story of return — trauma producing faith rather than destroying it. For an Israel-centric framework, it centers the hostage crisis as the defining Jewish trauma of this moment. For the political left, it raises an uncomfortable question: which traumas get centered, and which get left out? The post does not address Kalfon's views on the war, does not mention Palestinian suffering, and does not engage with the moral complexity of being held hostage while Israel conducts a military campaign, causing tens of thousands of civilian deaths. The performance is entirely inward-facing. It relies on the viewer to fill in everything it leaves out.</p>
+
+      <blockquote>
+        "This is beautiful" sits alongside "Baby killers" and "Your own governments would rather you died" — comments directed at a civilian hostage. The hostility does not undermine the post's argument. It confirms the argument of this entire study: that in the post-October 7th landscape, the same image can function simultaneously as testimony, institutional outreach, Zionist framing, and erasure, depending entirely on who is watching. That is not a failure of the post to communicate. It is the structural condition of Jewish public identity right now — every act of visibility is legible in multiple, irreconcilable ways at once.
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- CONCLUSION -->
+<section class="section" id="conclusion">
+  <div class="section-inner">
+    <span class="section-label">Conclusion</span>
+    <h2>A Fractured Picture</h2>
+
+    <p>What this analysis reveals is not a unified picture of Jewish pride after October 7th but a fractured one. The five accounts examined here do not agree on what Jewish identity is, what Israel means to it, or what pride in that identity should look like in public. What they share is only the refusal to go quiet.</p>
+
+    <p>That refusal is what Ahmed predicts. Pride, in her framework, is never simply an internal feeling — it is always a performance addressed to others, always a claim on social space, always a way of drawing boundaries between inside and outside. The post-October 7th moment destabilized the social conditions that make pride possible, forcing Jewish influencers to perform their identity in a landscape that Silverman documents as actively hostile — one saturated with epistemic antisemitism, with the new antisemitism that collapses Jewishness and Israeli statehood into a single target, and with algorithmic systems that, as Divon and Ebbrecht-Hartmann show, suppress Jewish counter-speech while permitting the hostility it responds to. The performances analyzed here do not take place in a neutral digital space. They take place against that documented backdrop, and they cannot be understood without it.</p>
+
+    <p>Sherman and Cohen's self-affirmation theory explains why the impulse to assert Jewish identity intensifies under these conditions. When self-integrity is threatened, people reaffirm what is meaningful and secure — and crucially, that reaffirmation need not address the threat directly. This is visible across every account. @thatjewishfamily does not argue about Gaza; they whack willow branches in Israel and post them without explanation. @modi_live does not address antisemitism head-on; he makes the anxiety about Nazis funny. @mollycrabapple does not defend herself against accusations of betraying Jewish solidarity; she recovers Bundist history and calls it her inheritance. Each is performing self-affirmation through a different aspect of Jewish identity, and none of them is doing the same thing.</p>
+
+    <p>Tajfel and Turner's social identity theory adds a dimension that Sherman and Cohen cannot fully account for: the fact that groups under threat do not only assert positive identity but draw boundaries around it, producing distinctiveness not only relative to outsiders but relative to other members of the same group. This is exactly what these accounts do. Each performance of Jewish pride is also an implicit argument about what should not count as pride. @unpackedmedia's Israel-centric framework makes Crabapple's anti-Zionism illegible as Jewish pride. Crabapple's Bundist genealogy makes @unpackedmedia's conflation of Jewishness and Israeli statehood a betrayal of Jewish values. @_cteen's diffuse, non-hierarchical Jewishness refuses both frameworks without engaging either directly. Modi's hybridity escapes categorization entirely. These are not variations within a shared identity. They are competing definitions of what that identity is.</p>
+
+    <p>This is where Udi and Golan's framework reaches its limit. Their "Celebrating Identity" repertoire describes a mode of Jewish Instagram performance that is deliberately inclusive, diffuse, and conflict-avoidant — designed to produce a positive, legible Jewish public image. That mode is visible in @_cteen and, at times, in @thatjewishfamily. But it cannot account for Crabapple's fury, Modi's dark humor about Nazis, or @unpackedmedia's explicit Zionist argument. October 7th did not produce the "Celebrating Identity" repertoire. It produced something rawer, more contested, and more analytically interesting. Roda's counterpublic framework is more useful here: what these accounts have in common is not celebration but the construction of alternative spaces for Jewish identity that push against the dominant framing — whether that dominant framing is antisemitism, institutional Zionism, or the expectation of polite Jewish silence.</p>
+
+    <p>October 7th did not create these divisions. It exposed them and forced them into public view on a platform that does not allow for private ambivalence. Post-October 7th Jewish pride is not a shared response to a collective threat. It is a field of competing responses, each asserting its own authenticity against the others. That plurality is not a weakness. It is the most honest picture available of what it means to be Jewish in public right now.</p>
+  </div>
+</section>
+
+<!-- WORKS CITED -->
+<section class="section works-cited" id="works-cited">
+  <div class="section-inner">
+    <span class="section-label">Works Cited</span>
+    <h2>Bibliography</h2>
+    <ul class="cite-list">
+      <li>Ahmed, S. (2014). <em>The Cultural Politics of Emotion</em> (NED-New edition, 2). Edinburgh University Press. https://www.jstor.org/stable/10.3366/j.ctt1g09x4q</li>
+      <li>Davis, J. L., Love, T. P., &amp; Fares, P. (2019). Collective Social Identity: Synthesizing Identity Theory and Social Identity Theory Using Digital Data. <em>Social Psychology Quarterly, 82</em>(3), 254–273. https://doi.org/10.1177/0190272519851025</li>
+      <li>Divon, T. &amp; Ebbrecht-Hartmann, T. (2022). #JewishTikTok: The JewToks' Fight against Antisemitism. In T. Boffone (Ed.), <em>TikTok Cultures in the United States</em> (pp. 44–56). Routledge.</li>
+      <li>Hine, C. (2020). <em>Ethnography for the Internet: Embedded, Embodied and Everyday.</em> Routledge. https://doi.org/10.4324/9781003085348</li>
+      <li>Hogan, B. (2010). The Presentation of Self in the Age of Social Media: Distinguishing Performances and Exhibitions Online. <em>Bulletin of Science, Technology &amp; Society, 30</em>(6), 377–386.</li>
+      <li>Ichau, E., Frissen, T., &amp; d'Haenens, L. (2019). From #selfie to #edgy. Hashtag networks and images associated with the hashtag #jews on Instagram. <em>Telematics and Informatics, 44</em>, 101275. https://doi.org/10.1016/j.tele.2019.101275</li>
+      <li>Sherman, D. &amp; Cohen, G. (2006). The Psychology of Self‐defense: Self‐Affirmation Theory. In <em>Advances in Experimental Social Psychology</em> (Vol. 38, pp. 183–242). Academic Press. https://doi.org/10.1016/S0065-2601(06)38004-5</li>
+      <li>Silverman, R.E. (2025). Antisemitism on Social Media Since October 7, 2023. <em>Jewish Film &amp; New Media, 11</em>(2), 159–182.</li>
+      <li>Steir-Livny, L. (2021). Humor as a Defense Mechanism: Dismantling Holocaust Symbols and Icons in Israeli Culture. In E. Vanderheiden &amp; C.-H. Mayer (Eds.), <em>The Palgrave Handbook of Humour Research</em> (pp. 173–187). Springer.</li>
+      <li>Tschoegl, E. Existential shattering in the American Jewish diaspora post-October 7: A literature review. <em>Journal of Human Behavior in the Social Environment.</em> https://www.tandfonline.com/doi/abs/10.1080/10911359.2026.2612935</li>
+      <li>Udi, T., &amp; Golan, O. (2026). Performing Identity on Social Media: Instagramming Jewishness on US University Campuses. <em>Religions, 17</em>(1), 12. https://doi.org/10.3390/rel17010012</li>
+    </ul>
+  </div>
+</section>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  if (window.instgrm) window.instgrm.Embeds.process();
+</script>
+</body>
+</html>
